@@ -1,0 +1,665 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter_regular, fallback-inter_regular, Arial, sans-serif;
+}
+
+body {
+    background-color: #F1F2F4;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+.head {
+    background-color: white;
+    height: 4.5rem;
+    padding: 1rem;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 6fr 4fr;
+    grid-template-rows: 1fr;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.head .logo {
+    padding-right: 0.3rem;
+    cursor: pointer;
+}
+
+.head .text-search {
+    display: flex;
+    margin-left: 2rem;
+}
+
+.head .text-search .search {
+    width: 100%;
+}
+
+.user-cart-seller {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 3fr auto 3fr;
+    padding-left: 2rem;
+    column-gap: 3rem;
+}
+
+.user-cart-seller .user {
+    display: grid;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2rem 1fr 1fr;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.user-cart-seller .user:hover{
+    background-color: #2874F0;
+    color: white;
+    border-radius: 6px;
+}
+
+.user-cart-seller .seller {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 1fr;
+}
+
+.bars{
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+.user-cart-seller #item {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2rem 6fr;
+    align-items: center;
+    cursor: pointer;
+}
+
+.head .text-search .button button {
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    border: none;
+    background-color: #F0F5FF;
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+    cursor: pointer;
+}
+
+.head .text-search .button button i {
+    font-size: 1.2rem;
+    color: #91949A;
+}
+
+
+
+.user-cart-seller .more-icon {
+    /* padding-left: 2rem; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-cart-seller .more-icon:hover{
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+.head .text-search .search input::placeholder {
+    color: #666666;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+
+.head .text-search .search input:focus {
+    border: none;
+    outline: none;
+}
+
+.head .text-search .search input::selection {
+    height: 2rem;
+    color: red;
+}
+
+
+
+.user-cart-seller .user #down-arrow {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 0.1rem;
+}
+
+.user-cart-seller .user #down-arrow:hover{
+   transform: rotate(180deg);
+   transition: 0.3s ease-out;
+}
+
+.head .text-search .search input {
+    height: 2.4rem;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border: none;
+    background-color: #F0F5FF;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.main {
+    padding: 0rem 1rem;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .product-container {
+   
+    padding: 0rem 6.3rem;
+    background-color: white;
+    display: grid; 
+    grid-template-columns: repeat(10,auto);
+    align-items: center;
+     column-gap: 1rem;
+
+
+}
+
+.product-container #product {
+   
+text-align: center;
+    padding: 1rem;
+    box-sizing: content-box;
+    cursor: pointer;
+
+
+
+}
+
+.product-container #product .logo img {
+    height: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-container #product p {
+    font-weight: 550;
+    letter-spacing: 0.03rem;
+    color: #333;
+    font-size: 14px;
+    /* text-wrap: nowrap; */
+    width: 100%;
+}
+
+.main .main-banner {
+    height: 15rem;
+    background-color: white;
+}
+
+.main .main-banner img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.main .mobile-container {
+    height: 21.5rem;
+    background-color: white;
+    padding: 1rem 1rem;
+
+}
+
+.container-product-img-title {
+    /* width: 40rem; */
+    /* background-color: red; */
+    height: 15.7rem;
+    margin: 1.8rem 0rem;
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+
+}
+
+.container-product-img-title::-webkit-scrollbar {
+    display: none;
+}
+
+.container-product-img-title .img {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12.6rem;
+    padding: 0.4rem 1rem;
+}
+
+.container-product-img-title #mobile {
+    height: 100%;
+    /* background-color: aqua; */
+    width: 18rem;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: 8px;
+    border-radius: 6px;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.container-product-img-title .img img {
+    height: 100%;
+    /* width: 100%; */
+
+}
+
+.container-product-img-title .img img:hover {
+    transform: scale(1.03);
+}
+
+.container-product-img-title .dtl {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.3;
+    /* background-color: black; */
+    height: 100%;
+}
+
+.container-product-img-title .dtl p{
+    font-size: 0.9rem;
+}
+
+
+.banner-container {
+    height: 17rem;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+    padding: 0px 0.3rem;
+}
+
+.banner-container #banner img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.sport-fintness-container {
+    height: 42rem;
+    cursor: pointer;
+    width: 38rem;
+    background-color: white;
+    padding: 1rem;
+}
+
+.sport-fintness-container .title {
+ padding: 12px 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 1.1rem;
+    /* background-color: green; */
+}
+
+.sport-fintness-container .main-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* background-color: yellow; */
+    
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sport-fintness-container .main-grid-container .product-card {
+    /* background-color: red; */
+   
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.sport-fintness-container .main-grid-container .product-card .img {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    /* padding: 1rem; */
+}
+
+
+
+.sport-fintness-container .main-grid-container .product-card .img img {
+   height: 100%;
+   width: 100%;
+   object-fit: contain;
+}
+
+.sport-fintness-container .main-grid-container .product-card .img img:hover {
+    transform: scale(1.03);
+}
+
+.sport-fintness-container .main-grid-container .product-card .dtl {
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+}
+
+.sport-fintness-container .main-grid-container .product-card .dtl .offers {
+    color: #108934;
+}
+
+.sport-container {
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    gap: 1rem;
+}
+
+.sport-container .right-side-advertise {
+    height: 42rem;
+    width: 100%;
+    background-color: red;
+    padding-right: 1rem;
+    background-image: url("https://rukminim2.flixcart.com/www/1070/750/promos/26/09/2023/ed27f892-1bc6-462f-805b-953f5add4f6a.jpg?q=80");
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.featured-brands{
+   background-color: white;
+   /* height: 95vh; */
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.featured-brands .title-brands{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.featured-brands .title-brands h3{
+    font-size: 1.3rem;
+}
+
+.featured-brands .container-brands{
+    height: 16.3rem;
+    overflow-x: scroll;
+    display: flex;
+    gap: 1rem;
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.featured-brands .container-brands .card-brand{
+    height: 100%;
+    width: 27rem;
+}
+
+.featured-brands .container-brands .card-brand img{
+    height: 100%;
+    cursor: pointer;
+}
+
+.featured-brands .banner-help{
+    margin-top: 1rem;
+    height: 19rem;
+    background-color: black;
+    padding: 0px 0px !important;
+    background-image: url("https://rukminim2.flixcart.com/fk-p-flap/1600/350/image/4f095748fe5cdf77.png?q=20");
+    transform: scale(1.03);
+    overflow: hidden;
+   
+}
+
+.featured-brands .banner-help img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Footer */
+#footer_dt {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer {
+    background-color: rgb(23, 24, 24);
+    height: 22rem;
+    bottom: 0;
+    margin-top: 3rem;
+   
+
+}
+
+.description .footer_part {
+    display: grid;
+    grid-template-columns: 8fr 6fr;
+    grid-template-rows: 1fr;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    /* align-items: center; */
+    column-gap: 6rem;
+    height: 13rem;
+    border-right: 1px solid #454d5e;
+    padding-right: 2rem;
+}
+
+#footer_dt a {
+    color: white;
+    font-weight: bold;
+    line-height: 1.2rem
+}
+
+.social_details {
+ 
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    color: white;
+    font-size: 15px;
+    column-gap: 1rem;
+    padding-left: 2rem;
+    font-size: 12px;
+}
+
+.social_details p {
+    font-size: 12px;
+    line-height: 19px;
+    letter-spacing: 0.03rem;
+}
+
+.social_icon {
+    display: grid;
+    width: 5rem;
+
+}
+
+.description {
+    display: flex;
+    width: 100%;
+    /* background-color: red; */
+    height: 18rem;
+    border-bottom: 1px solid white;
+    padding: 1rem;
+    padding-top: 3rem;
+    font-size: 12px;
+}
+
+.s_icons {
+    display: grid;
+    grid-template-columns: 5fr 5fr 5fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    padding-top: 1rem;
+    height: 2rem;
+
+
+
+}
+
+.social_details .mail,
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.s_icons i {
+    font-weight: 500;
+    font-size: medium;
+    cursor: pointer;
+}
+
+
+label {
+    color: #878787;
+    font-size: 12px;
+}
+
+.address span {
+    color: #2874F0;
+}
+
+.footer_part2 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    height: 4rem;
+    /* justify-items: center;  */
+    align-items: center;
+    padding: 0rem 6rem;
+}
+
+.one {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    color: white;
+
+}
+
+#footer_details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#footer_details p {
+    font-size: 12px;
+    /* cursor: pointer; */
+}
+
+footer li:hover{
+    text-decoration: underline;
+}
+
+.one #para{
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+        .main .product-container{
+            overflow-y: scroll;
+        }
+
+        .main-banner{
+            background-image: cover;
+        }
+        .head .text-search .search input::placeholder{
+            font-size: 0.8rem;
+            padding-left: 0;
+            margin-left: 0;
+            letter-spacing: 0.06rem;
+        }
+        .head{
+            display: grid;
+            grid-template-columns: 1fr 6fr 4fr;
+            grid-template-rows: 1fr;
+        }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .main .product-container{
+        overflow-y: scroll;
+    }
+
+    .main-banner{
+        background-image: cover;
+    }
+    .head .text-search .search input::placeholder{
+        font-size: 0.8rem;
+        padding-left: 0;
+        margin-left: 0;
+        letter-spacing: 0.06rem;
+    }
+
+    .head{
+        display: grid;
+        grid-template-columns: 1fr 12fr 4fr;
+        grid-template-rows: 1fr;
+    }
+
+    .bars{
+        display: flex;
+        justify-content: end;
+        padding: 0rem 3rem;
+        opacity: 1;
+    }
+
+    .user-cart-seller{
+        display: none;
+    }
+}
